@@ -1,7 +1,10 @@
-function takeANumber(deliLine, name) {
-  deliLine.push(name);
+var ticketNum = 1;
 
-  return `Welcome, ${name}. You are number ${deliLine.length} in line.`;
+function takeANumber(deliLine) {
+  deliLine.push(ticketNum);
+  ticketNum++;
+  
+  return `Welcome. You are number ${deliLine.length} in line, with ticket number ${deliLine[deliLine.length - 1]}.`;
 }
 
 function nowServing(deliLine) {
